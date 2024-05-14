@@ -12,6 +12,7 @@ import __init__ as booger
 
 from modules.user import *
 
+#MCW
 '''
 if __name__ == '__main__':
   parser = argparse.ArgumentParser("./infer.py")
@@ -50,7 +51,7 @@ if __name__ == '__main__':
 
   # open arch config file
 '''
-def validation(dataset, log, model):
+def validation(dataset, log, model, config):
     try:
       print("Opening arch config file from %s" % model)
       ARCH = yaml.safe_load(open(model + "/arch_cfg.yaml", 'r'))
@@ -112,5 +113,5 @@ def validation(dataset, log, model):
       quit()
   
     # create user and infer dataset
-    user = User(ARCH, DATA, dataset, log, model)
+    user = User(ARCH, DATA, dataset, log, model, config)
     user.ptq()

@@ -50,7 +50,7 @@ class Trainer():
                  "post_lr": 0}
 
     # get the data
-    parserPath = "/home/ava/rajrup/darknet/aimet/dataset/kitti/parser.py"
+    parserPath = 'src/dataset/' + self.DATA["name"] + '/parser.py'
     parserModule = imp.load_source("parserModule", parserPath)
     self.parser = parserModule.Parser(root=self.datadir,
                                       train_sequences=self.DATA["split"]["train"],
@@ -100,6 +100,7 @@ class Trainer():
       self.gpu = True
       self.n_gpus = 1
       self.model.cuda()
+    #MCW
     '''
     if torch.cuda.is_available() and torch.cuda.device_count() > 1:
       print("Let's use", torch.cuda.device_count(), "GPUs!")
@@ -241,6 +242,7 @@ class Trainer():
       self.info["train_acc"] = acc
       self.info["train_iou"] = iou
       '''
+      #MCW
       # remember best iou and save checkpoint
       if iou > best_train_iou:
         print("Best mean iou in training set so far, save model!")
@@ -263,6 +265,7 @@ class Trainer():
         self.info["valid_acc"] = acc
         self.info["valid_iou"] = iou
         '''
+        #MCW
         # remember best iou and save checkpoint
         if iou > best_val_iou:
           print("Best mean iou in validation so far, save model!")
@@ -286,7 +289,7 @@ class Trainer():
         '''
     print('Finished Training')
 
-    return
+    return self.model
 
   def train_epoch(self, train_loader, model, criterion, optimizer, epoch, evaluator, scheduler, color_fn, report=10, show_scans=False):
     batch_time = AverageMeter()
@@ -383,7 +386,6 @@ class Trainer():
 
       # step scheduler
       scheduler.step()
-      if i > 1000: break
     
     return acc.avg, iou.avg, losses.avg, update_ratio_meter.avg
 

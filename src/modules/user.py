@@ -36,16 +36,17 @@ import aimet_torch
 
 
 class User():
-  def __init__(self, ARCH, DATA, datadir, logdir, modeldir):
+  def __init__(self, ARCH, DATA, datadir, logdir, modeldir, config):
     # parameters
     self.ARCH = ARCH
     self.DATA = DATA
     self.datadir = datadir
     self.logdir = logdir
     self.modeldir = modeldir
+    self.config = config
 
     # get the data
-    parserModule = imp.load_source("parserModule", '/home/ava/rajrup/darknet/aimet/dataset/' + self.DATA["name"] + '/parser.py')
+    parserModule = imp.load_source("parserModule", 'src/dataset/' + self.DATA["name"] + '/parser.py')
     self.parser = parserModule.Parser(root=self.datadir,
                                       train_sequences=self.DATA["split"]["train"],
                                       valid_sequences=self.DATA["split"]["valid"],
@@ -84,6 +85,9 @@ class User():
       cudnn.fastest = True
       self.gpu = True
       self.model.cuda()
+      
+    self.input_shape=self.config['input_shape']
+    self.dummy_input = torch.rand(self.input_shape).cuda()
   
   def infer(self):
     # do train set
@@ -107,34 +111,34 @@ class User():
 
   def ptq(self):
     print("\nModel Validate 1")
-    #ModelValidator.validate_model(self.model, model_input=self.dummy_input)
+    ModelValidator.validate_model(self.model, model_input=self.dummy_input)
     
     print("\nPrepare Model") 
     self.model = prepare_model(self.model.eval())
     
     print("\nModel Validate 2")
-    #ModelValidator.validate_model(self.model, model_input=self.dummy_input)
-    #self.infer()
+    ModelValidator.validate_model(self.model, model_input=self.dummy_input)
+    self.infer()
     
-    self.input_shape=(1,5,64,2048)
     equalize_model(self.model, self.input_shape)
     
     dataloader=self.parser.get_valid_set()
           
-    params = AdaroundParameters(data_loader=dataloader, num_batches= 32, default_num_iterations=100)
+    params = AdaroundParameters(data_loader=dataloader, num_batches= 32, default_num_iterations=10000)
     
-    self.model = Adaround.apply_adaround(model = self.model, dummy_input = self.dummy_input, params = params, path='/home/ava/rajrup/darknet/artifacts/', filename_prefix='Adaround', default_param_bw=8, default_quant_scheme="tf_enhanced")
+    self.model = Adaround.apply_adaround(model = self.model, dummy_input = self.dummy_input, params = params, 
+                                         path=self.config['exports_path'], filename_prefix='Adaround', default_param_bw=8, default_quant_scheme="tf_enhanced")
          
     kwargs = {
         "quant_scheme": QuantScheme.training_range_learning_with_tf_init,
-        "default_param_bw": 8,
-        "default_output_bw": 8, 
+        "default_param_bw": self.config["quantization_configuration"]["param_bw"],
+        "default_output_bw": self.config["quantization_configuration"]["output_bw"], 
         "dummy_input": self.dummy_input,
     }
     
     sim = QuantizationSimModel(self.model, **kwargs)
 
-    sim.set_and_freeze_param_encodings(encoding_path='/home/ava/rajrup/darknet/artifacts/'+'/Adaround.encodings')
+    sim.set_and_freeze_param_encodings(encoding_path=self.config['exports_path']+'/Adaround.encodings')
     print("set_and_freeze_param_encodings finished!")
 
 

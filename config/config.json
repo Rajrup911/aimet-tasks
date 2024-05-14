@@ -1,0 +1,20 @@
+{
+    "name": "darknet",
+    "task": "sematic segmentation",
+    "input_shape": [1, 5, 64, 2048],
+    "training_dataset": "Kitti",
+    "quantization_configuration":
+    {
+        "type": "darknetnet_w8a8",
+        "param_bw": 8,
+        "output_bw": 8,
+        "quant_scheme": "tf_enhanced"
+    },
+    "allowed_accuracy_drop": 1,
+    "dataset": "/media/ava/DATA/aleesha/datasets",
+    "pretrained_model": "artifacts/darknet53",
+    "exports_path": "/home/ava/rajrup/darknet/artifacts",
+    "exports_name": "darknet_manual_ptq_5x64x2048",
+    "Result":"src/prediction",
+    "qat_name":"darknet_qat_5x64x2048"
+}

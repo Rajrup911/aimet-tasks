@@ -145,14 +145,14 @@ class Backbone(nn.Module):
                      block(inplanes, planes, bn_d)))
 
     return nn.Sequential(OrderedDict(layers))
-
+  #MCW
   def run_layer1(self, x, layer, skips, os):
     y = layer(x)
     skips[os] = x.detach()
     os *= 2
     x = y
     return x, skips, os
-
+  #MCW
   def run_layer2(self, x, layer, skips, os):
     y = layer(x)
     x = y

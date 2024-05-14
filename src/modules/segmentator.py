@@ -20,7 +20,7 @@ class Segmentator(nn.Module):
 
     # get the model
     bboneModule = imp.load_source("bboneModule",
-                                  "/home/ava/rajrup/darknet/aimet/backbones/" +
+                                  "src/backbones/" +
                                   self.ARCH["backbone"]["name"] + '.py')
     self.backbone = bboneModule.Backbone(params=self.ARCH["backbone"])
 
@@ -36,7 +36,7 @@ class Segmentator(nn.Module):
     _, stub_skips = self.backbone(stub)
 
     decoderModule = imp.load_source("decoderModule",
-                                    '/home/ava/rajrup/darknet/aimet/decoders/' +
+                                    'src/decoders/' +
                                     self.ARCH["decoder"]["name"] + '.py')
     self.decoder = decoderModule.Decoder(params=self.ARCH["decoder"],
                                          stub_skips=stub_skips,
