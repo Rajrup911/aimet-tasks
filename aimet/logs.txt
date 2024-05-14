@@ -1,0 +1,346 @@
+2024-05-14 14:27:08,965 - root - INFO - AIMET
+Opening arch config file from /home/ava/rajrup/darknet/artifacts/darknet53/
+Opening data config file from /home/ava/rajrup/darknet/artifacts/darknet53/
+valid 08
+train 00
+train 01
+train 02
+train 03
+train 04
+train 05
+train 06
+train 07
+train 09
+train 10
+model folder exists! Using model from /home/ava/rajrup/darknet/artifacts/darknet53/
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 00
+parsing seq 01
+parsing seq 02
+parsing seq 03
+parsing seq 04
+parsing seq 05
+parsing seq 06
+parsing seq 07
+parsing seq 09
+parsing seq 10
+Using 19130 scans from sequences [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 08
+Using 4071 scans from sequences [8]
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 11
+parsing seq 12
+parsing seq 13
+parsing seq 14
+parsing seq 15
+parsing seq 16
+parsing seq 17
+parsing seq 18
+parsing seq 19
+parsing seq 20
+parsing seq 21
+Using 20351 scans from sequences [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+Using DarknetNet53 Backbone
+Depth of backbone input =  5
+Original OS:  32
+New OS:  32
+Strides:  [2, 2, 2, 2, 2]
+Decoder original OS:  32
+Decoder new OS:  32
+Decoder strides:  [2, 2, 2, 2, 2]
+Total number of parameters:  50377364
+Total number of parameters requires_grad:  50377364
+Param encoder  40585504
+Param decoder  9786080
+Param head  5780
+Successfully loaded model backbone weights
+Successfully loaded model decoder weights
+Successfully loaded model head weights
+Infering in device:  cuda
+
+Model Validate 1
+
+Prepare Model
+2024-05-14 14:27:13,506 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc1.residual_0.module_add} 
+2024-05-14 14:27:13,506 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc2.residual_0.module_add_1} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc2.residual_1.module_add_2} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_1} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_0.module_add_3} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_1.module_add_4} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_2.module_add_5} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_3.module_add_6} 
+2024-05-14 14:27:13,507 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_4.module_add_7} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_5.module_add_8} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_6.module_add_9} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_7.module_add_10} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_2} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_0.module_add_11} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_1.module_add_12} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_2.module_add_13} 
+2024-05-14 14:27:13,508 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_3.module_add_14} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_4.module_add_15} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_5.module_add_16} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_6.module_add_17} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_7.module_add_18} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_3} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_0.module_add_19} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_1.module_add_20} 
+2024-05-14 14:27:13,509 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_2.module_add_21} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_3.module_add_22} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_4} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec5.residual.module_add_23} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_24} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec4.residual.module_add_25} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_26} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec3.residual.module_add_27} 
+2024-05-14 14:27:13,510 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_28} 
+2024-05-14 14:27:13,511 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec2.residual.module_add_29} 
+2024-05-14 14:27:13,511 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_30} 
+2024-05-14 14:27:13,511 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec1.residual.module_add_31} 
+2024-05-14 14:27:13,511 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_32} 
+2024-05-14 14:27:13,511 - ModelPreparer - INFO - Functional         : Adding new module for node: {module_softmax} 
+2024-05-14 14:29:41,868 - root - INFO - AIMET
+Opening arch config file from /home/ava/rajrup/darknet/artifacts/darknet53/
+Opening data config file from /home/ava/rajrup/darknet/artifacts/darknet53/
+valid 08
+train 00
+train 01
+train 02
+train 03
+train 04
+train 05
+train 06
+train 07
+train 09
+train 10
+model folder exists! Using model from /home/ava/rajrup/darknet/artifacts/darknet53/
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 00
+parsing seq 01
+parsing seq 02
+parsing seq 03
+parsing seq 04
+parsing seq 05
+parsing seq 06
+parsing seq 07
+parsing seq 09
+parsing seq 10
+Using 19130 scans from sequences [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 08
+Using 4071 scans from sequences [8]
+Sequences folder exists! Using sequences from /media/ava/DATA/aleesha/datasets/sequences
+parsing seq 11
+parsing seq 12
+parsing seq 13
+parsing seq 14
+parsing seq 15
+parsing seq 16
+parsing seq 17
+parsing seq 18
+parsing seq 19
+parsing seq 20
+parsing seq 21
+Using 20351 scans from sequences [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+Using DarknetNet53 Backbone
+Depth of backbone input =  5
+Original OS:  32
+New OS:  32
+Strides:  [2, 2, 2, 2, 2]
+Decoder original OS:  32
+Decoder new OS:  32
+Decoder strides:  [2, 2, 2, 2, 2]
+Total number of parameters:  50377364
+Total number of parameters requires_grad:  50377364
+Param encoder  40585504
+Param decoder  9786080
+Param head  5780
+Successfully loaded model backbone weights
+Successfully loaded model decoder weights
+Successfully loaded model head weights
+Infering in device:  cuda
+
+Model Validate 1
+
+Prepare Model
+2024-05-14 14:29:46,458 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc1.residual_0.module_add} 
+2024-05-14 14:29:46,458 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc2.residual_0.module_add_1} 
+2024-05-14 14:29:46,458 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc2.residual_1.module_add_2} 
+2024-05-14 14:29:46,458 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_1} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_0.module_add_3} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_1.module_add_4} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_2.module_add_5} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_3.module_add_6} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_4.module_add_7} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_5.module_add_8} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_6.module_add_9} 
+2024-05-14 14:29:46,459 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc3.residual_7.module_add_10} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_2} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_0.module_add_11} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_1.module_add_12} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_2.module_add_13} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_3.module_add_14} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_4.module_add_15} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_5.module_add_16} 
+2024-05-14 14:29:46,460 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_6.module_add_17} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc4.residual_7.module_add_18} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_3} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_0.module_add_19} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_1.module_add_20} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_2.module_add_21} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Functional         : Adding new module for node: {backbone.enc5.residual_3.module_add_22} 
+2024-05-14 14:29:46,461 - ModelPreparer - INFO - Reused/Duplicate   : Adding new module for node: {backbone.module_dropout_4} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec5.residual.module_add_23} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_24} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec4.residual.module_add_25} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_26} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec3.residual.module_add_27} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_28} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec2.residual.module_add_29} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_30} 
+2024-05-14 14:29:46,462 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.dec1.residual.module_add_31} 
+2024-05-14 14:29:46,463 - ModelPreparer - INFO - Functional         : Adding new module for node: {decoder.module_add_32} 
+2024-05-14 14:29:46,463 - ModelPreparer - INFO - Functional         : Adding new module for node: {module_softmax} 
+
+Model Validate 2
+2024-05-14 14:29:49,814 - Utils - INFO - ...... subset to store [Conv_15, BatchNormalization_16]
+2024-05-14 14:29:49,814 - Utils - INFO - ...... subset to store [Conv_18, BatchNormalization_19]
+2024-05-14 14:29:49,814 - Utils - INFO - ...... subset to store [Conv_21, BatchNormalization_22]
+2024-05-14 14:29:49,814 - Utils - INFO - ...... subset to store [Conv_24, BatchNormalization_25]
+2024-05-14 14:29:49,814 - Utils - INFO - ...... subset to store [Conv_31, BatchNormalization_32]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_34, BatchNormalization_35]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_37, BatchNormalization_38]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_42, BatchNormalization_43]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_45, BatchNormalization_46]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_52, BatchNormalization_53]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_55, BatchNormalization_56]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_58, BatchNormalization_59]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_63, BatchNormalization_64]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_66, BatchNormalization_67]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_71, BatchNormalization_72]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_74, BatchNormalization_75]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_79, BatchNormalization_80]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_82, BatchNormalization_83]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_87, BatchNormalization_88]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_90, BatchNormalization_91]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_95, BatchNormalization_96]
+2024-05-14 14:29:49,815 - Utils - INFO - ...... subset to store [Conv_98, BatchNormalization_99]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_103, BatchNormalization_104]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_106, BatchNormalization_107]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_111, BatchNormalization_112]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_114, BatchNormalization_115]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_121, BatchNormalization_122]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_124, BatchNormalization_125]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_127, BatchNormalization_128]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_132, BatchNormalization_133]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_135, BatchNormalization_136]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_140, BatchNormalization_141]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_143, BatchNormalization_144]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_148, BatchNormalization_149]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_151, BatchNormalization_152]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_156, BatchNormalization_157]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_159, BatchNormalization_160]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_164, BatchNormalization_165]
+2024-05-14 14:29:49,816 - Utils - INFO - ...... subset to store [Conv_167, BatchNormalization_168]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_172, BatchNormalization_173]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_175, BatchNormalization_176]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_180, BatchNormalization_181]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_183, BatchNormalization_184]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_190, BatchNormalization_191]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_193, BatchNormalization_194]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_196, BatchNormalization_197]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_201, BatchNormalization_202]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_204, BatchNormalization_205]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_209, BatchNormalization_210]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_212, BatchNormalization_213]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_217, BatchNormalization_218]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_220, BatchNormalization_221]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [ConvTranspose_227, BatchNormalization_228]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_230, BatchNormalization_231]
+2024-05-14 14:29:49,817 - Utils - INFO - ...... subset to store [Conv_233, BatchNormalization_234]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [ConvTranspose_241, BatchNormalization_242]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_244, BatchNormalization_245]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_247, BatchNormalization_248]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [ConvTranspose_255, BatchNormalization_256]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_258, BatchNormalization_259]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_261, BatchNormalization_262]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [ConvTranspose_269, BatchNormalization_270]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_272, BatchNormalization_273]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_275, BatchNormalization_276]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [ConvTranspose_283, BatchNormalization_284]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_286, BatchNormalization_287]
+2024-05-14 14:29:49,818 - Utils - INFO - ...... subset to store [Conv_289, BatchNormalization_290]
+2024-05-14 14:30:01,400 - BatchNormFolding - INFO - 0 BatchNorms' weights got converted
+2024-05-14 14:30:07,318 - Quant - INFO - No config file provided, defaulting to config file at /home/ava/rajrup/envr/lib/python3.8/site-packages/aimet_common/quantsim_config/default_config.json
+2024-05-14 14:30:07,347 - Quant - INFO - Unsupported op type Squeeze
+2024-05-14 14:30:07,347 - Quant - INFO - Unsupported op type Mean
+2024-05-14 14:30:07,365 - Quant - INFO - Selecting DefaultOpInstanceConfigGenerator to compute the specialized config. hw_version:default
+2024-05-14 14:30:10,285 - Utils - INFO - Caching 32 batches from data loader at path location: /tmp/adaround/
+2024-05-14 14:30:10,353 - Quant - INFO - Started Optimizing weight rounding of module: backbone.conv1
+2024-05-14 14:30:14,292 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc1.conv
+2024-05-14 14:30:20,579 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc1.residual_0.conv1
+2024-05-14 14:30:23,879 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc1.residual_0.conv2
+2024-05-14 14:30:29,766 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc2.conv
+2024-05-14 14:30:36,689 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc2.residual_0.conv1
+2024-05-14 14:30:39,935 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc2.residual_0.conv2
+2024-05-14 14:30:46,164 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc2.residual_1.conv1
+2024-05-14 14:30:49,483 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc2.residual_1.conv2
+2024-05-14 14:30:55,558 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.conv
+2024-05-14 14:31:05,192 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_0.conv1
+2024-05-14 14:31:08,753 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_0.conv2
+2024-05-14 14:31:15,502 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_1.conv1
+2024-05-14 14:31:19,106 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_1.conv2
+2024-05-14 14:31:25,631 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_2.conv1
+2024-05-14 14:31:29,385 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_2.conv2
+2024-05-14 14:31:36,378 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_3.conv1
+2024-05-14 14:31:40,282 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_3.conv2
+2024-05-14 14:31:47,235 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_4.conv1
+2024-05-14 14:31:51,054 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_4.conv2
+2024-05-14 14:31:57,821 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_5.conv1
+2024-05-14 14:32:01,713 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_5.conv2
+2024-05-14 14:32:08,537 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_6.conv1
+2024-05-14 14:32:12,496 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_6.conv2
+2024-05-14 14:32:19,401 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_7.conv1
+2024-05-14 14:32:23,455 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc3.residual_7.conv2
+2024-05-14 14:32:30,506 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.conv
+2024-05-14 14:32:47,659 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_0.conv1
+2024-05-14 14:32:52,481 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_0.conv2
+2024-05-14 14:33:01,485 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_1.conv1
+2024-05-14 14:33:06,382 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_1.conv2
+2024-05-14 14:33:14,901 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_2.conv1
+2024-05-14 14:33:19,904 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_2.conv2
+2024-05-14 14:33:28,644 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_3.conv1
+2024-05-14 14:33:33,779 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_3.conv2
+2024-05-14 14:33:42,574 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_4.conv1
+2024-05-14 14:33:47,835 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_4.conv2
+2024-05-14 14:33:56,779 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_5.conv1
+2024-05-14 14:34:02,178 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_5.conv2
+2024-05-14 14:34:11,243 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_6.conv1
+2024-05-14 14:34:16,742 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_6.conv2
+2024-05-14 14:34:25,907 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_7.conv1
+2024-05-14 14:34:31,483 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc4.residual_7.conv2
+2024-05-14 14:34:40,737 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.conv
+2024-05-14 14:35:12,589 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_0.conv1
+2024-05-14 14:35:20,135 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_0.conv2
+2024-05-14 14:35:34,122 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_1.conv1
+2024-05-14 14:35:41,799 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_1.conv2
+2024-05-14 14:35:54,802 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_2.conv1
+2024-05-14 14:36:02,756 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_2.conv2
+2024-05-14 14:36:15,976 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_3.conv1
+2024-05-14 14:36:24,161 - Quant - INFO - Started Optimizing weight rounding of module: backbone.enc5.residual_3.conv2
+2024-05-14 14:36:37,696 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec5.upconv
+2024-05-14 14:36:56,745 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec5.residual.conv1
+2024-05-14 14:37:12,319 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec5.residual.conv2
+2024-05-14 14:38:07,210 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec4.upconv
+2024-05-14 14:38:21,041 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec4.residual.conv1
+2024-05-14 14:39:11,663 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec4.residual.conv2
+2024-05-14 14:39:41,362 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec3.upconv
+2024-05-14 14:39:52,266 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec3.residual.conv1
+2024-05-14 14:40:41,337 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec3.residual.conv2
+2024-05-14 14:41:01,252 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec2.upconv
+2024-05-14 14:41:11,149 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec2.residual.conv1
+2024-05-14 14:42:02,247 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec2.residual.conv2
+2024-05-14 14:42:20,382 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec1.upconv
+2024-05-14 14:42:30,291 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec1.residual.conv1
+2024-05-14 14:42:42,315 - Quant - INFO - Started Optimizing weight rounding of module: decoder.dec1.residual.conv2
