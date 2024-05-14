@@ -34,6 +34,6 @@ Model picked up from 'https://github.com/PRBonn/lidar-bonnetal/tree/master'
 
 ### Command to run full pipeline
 ```zsh
-python src/quant.py --config config/config.json
+python src/main.py --config config/config.json
 ```
 
