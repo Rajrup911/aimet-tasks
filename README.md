@@ -26,7 +26,7 @@ Model picked up from 'https://github.com/PRBonn/lidar-bonnetal/tree/master'
 | Acc avg   | 0.888 | 0.840 | 
 | IoU avg   | 0.503 | 0.456 |
 
-- QAT
+- QAT (PTQ Adaround Parameters: num_batches = 16, default_num_iterations = 100)
   
 Epoch 1
 - Acc avg 0.557
