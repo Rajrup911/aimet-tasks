@@ -26,7 +26,27 @@ Model picked up from 'https://github.com/PRBonn/lidar-bonnetal/tree/master'
 | Acc avg   | 0.888 | 0.840 | 
 | IoU avg   | 0.503 | 0.456 |
 
-- QAT 
+- QAT
+  
+Epoch 1
+- Acc avg 0.557
+- IoU avg 0.194
+- LR 5.000e-03
+
+Epoch 2
+- Acc avg 0.756
+- IoU avg 0.289
+- LR 4.950e-03
+
+Epoch 3
+- Acc avg 0.758
+- IoU avg 0.318
+- LR 4.901e-03
+
+Epoch 4
+- Acc avg 0.811
+- IoU avg 0.338
+- LR 4.859e-03
 
 ## License
 
